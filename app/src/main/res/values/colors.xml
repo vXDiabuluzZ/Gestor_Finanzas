@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dinero">#00825a</color>
+    <color name="azul">#0000ff</color>
+    <color name="azulsaturado">#1919e6</color>
+    <color name="azuloscuro">#1414b8</color>
+    <color name="rojo">#ec5353</color>
 </resources>

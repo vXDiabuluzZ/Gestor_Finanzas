@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/rojo"
     tools:context=".inicio">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_registro_gastos"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textAlignment="center">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="@string/add_monto"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="@string/descripcion"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/registrar"
+            android:layout_height="wrap_content">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/resultados"
+            android:text="@string/historial"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/money_registro_gastos"
+        app:lottie_loop="true"
+        android:layout_height="wrap_content">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
+
+</LinearLayout>

@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class inicio extends AppCompatActivity {
+
+    Button historial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,5 +17,15 @@ public class inicio extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 
         Intent recibir_peticion=getIntent();
+        historial=findViewById(R.id.resultados);
+
+        historial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent history = new Intent(inicio.this, resultados.class);
+                startActivity(history);
+            }
+        });
     }
 }
