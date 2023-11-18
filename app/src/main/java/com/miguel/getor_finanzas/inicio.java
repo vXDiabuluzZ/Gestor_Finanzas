@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class inicio extends AppCompatActivity {
 
-    Button historial;
+    Button historial, registrarj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class inicio extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 
         Intent recibir_peticion=getIntent();
+        registrarj = findViewById(R.id.registrar);
         historial=findViewById(R.id.resultados);
 
         historial.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +26,13 @@ public class inicio extends AppCompatActivity {
 
                 Intent history = new Intent(inicio.this, resultados.class);
                 startActivity(history);
+            }
+        });
+
+        registrarj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
