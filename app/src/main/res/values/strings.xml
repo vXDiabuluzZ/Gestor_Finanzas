@@ -8,4 +8,6 @@
     <string name="registrar">Registrar</string>
     <string name="descripcion">Descripción</string>
     <string name="historial">Ver resultados</string>
+    <string name="titulo">Titulo</string>
+    <string name="consejo">Descripcion</string>
 </resources>
