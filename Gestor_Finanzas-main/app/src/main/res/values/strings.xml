@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Getor_finanzas</string>
+    <string name="entrar">Entrar</string>
+    <string name="saludo">! BIENVENDIO A LA REVISIÓN DE TUS GASTOS ¡</string>
+    <string name="consejos">Ver consejos</string>
+    <string name="screen_registro_gastos">Registro de gastos</string>
+    <string name="add_monto">Cuanto se gastó?</string>
+    <string name="registrar">Registrar</string>
+    <string name="descripcion">Descripción</string>
+    <string name="historial">Ver resultados</string>
+    <string name="titulo">Titulo</string>
+    <string name="consejo">Descripcion</string>
+</resources>
