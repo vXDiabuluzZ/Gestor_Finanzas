@@ -10,7 +10,7 @@ public class db extends SQLiteOpenHelper {
 
     private static final String name_db = "Gestor_db";
     private static final int version_db=1;
-    private static final String TABLE_CONSEJOS="CREATE TABLE CONSEJOS(id INT  PRIMERY KEY AUTOINCREMENT, titulo TEXT, descripcion TEXT)";
+    private static final String TABLE_CONSEJOS="CONSEJOS";
 
     public db(@Nullable Context context) {
         super(context, name_db, null, version_db);
@@ -18,13 +18,17 @@ public class db extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLE_CONSEJOS);
+
+        db.execSQL("CREATE TABLE " + TABLE_CONSEJOS + "(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                 "titulo TEXT, " +
+                 "descripcion TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONSEJOS);
-        db.execSQL(TABLE_CONSEJOS);
+        db.execSQL("DROP TABLE " + TABLE_CONSEJOS);
+        onCreate(db);
     }
 
     public void AgregarConsejos(String titulo_para, String descripcion_para){
